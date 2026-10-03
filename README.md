@@ -16,8 +16,8 @@ A report holds the page, the mod and its version, the versions of the Almanac, M
 In `config/almanac_o_adventures-common.toml`:
 
 ```toml
-fixesUrl = "https://raw.githubusercontent.com/<owner>/almanac-fixes/main/fixes.json"
-reportUrl = "https://github.com/<owner>/almanac-fixes/issues/new?labels=report"
+fixesUrl = "https://raw.githubusercontent.com/milfheim/almanac-fixes/main/fixes.json"
+reportUrl = "https://github.com/milfheim/almanac-fixes/issues/new?labels=report"
 fetchFixes = true
 ```
 
