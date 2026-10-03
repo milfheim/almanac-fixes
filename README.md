@@ -13,7 +13,7 @@ A report holds the page, the mod and its version, the versions of the Almanac, M
 
 ## Pointing a pack at this repository
 
-In `config/almanac_o_adventures-common.toml`:
+In `config/lore_o_libs-common.toml`:
 
 ```toml
 fixesUrl = "https://raw.githubusercontent.com/milfheim/almanac-fixes/main/fixes.json"
