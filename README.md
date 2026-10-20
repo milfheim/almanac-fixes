@@ -51,4 +51,21 @@ A pack can also keep fixes of its own in `config/almanac_o_adventures-fixes.json
 | `versions` | Optional. The versions of its mod the fix applies to, as a Forge range. Left out: all versions. |
 | `note` | Optional. Why the fix exists. |
 
-Only creatures have fixes so far. Items, structures and biomes can be added to the format when a report calls for it.
+### Loot the book must not read (Lore O’ Libs 1.124.0+)
+
+To build drop lists the book reads every loot table, which runs each mod’s own loot code. If a mod’s loot code crashes when read, that mod (or one table) can be switched off for everyone here:
+
+```json
+{
+  "format": 1,
+  "skipLoot": {
+    "somemod":                     { "note": "its loot code crashes when read", "versions": "[1.0,1.5)" },
+    "othermod:entities/some_boss": { "note": "one table that breaks" }
+  },
+  "creatures": {}
+}
+```
+
+A key is a mod’s namespace (all its tables) or a full table id. `versions` and `note` work as for creatures. Since 1.124.0 a table that fails to read is skipped by itself, so this is for crashes of a kind the book doesn’t yet guard against.
+
+Only creatures and loot have fixes so far. Items, structures and biomes can be added to the format when a report calls for it.
