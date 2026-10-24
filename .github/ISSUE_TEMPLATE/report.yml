@@ -1,0 +1,19 @@
+name: Something is shown wrongly
+description: An animation, a pose, a grouping or a picture in the Almanac is wrong
+labels: [report]
+body:
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: One or two sentences. A screenshot or short clip helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: The report
+      description: In the book, open the close-up of the page, click the ! button and pick what is wrong. The report is copied; paste it here.
+      render: json
+    validations:
+      required: true
